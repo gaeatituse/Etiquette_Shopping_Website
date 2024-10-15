@@ -9,6 +9,14 @@
             width: 65px;
         }
         
+        .auto-style4 {
+            width: 65px;
+            height: 27px;
+        }
+        .auto-style5 {
+            height: 27px;
+        }
+        
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -19,9 +27,9 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style4"></td>
+            <td class="auto-style5"></td>
+            <td class="auto-style5"></td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
