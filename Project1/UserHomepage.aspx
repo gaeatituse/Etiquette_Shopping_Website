@@ -31,7 +31,7 @@
         <tr>
             <td class="auto-style3">&nbsp;</td>
             <td>
-                <asp:DataList ID="DataList1" runat="server" CellPadding="100" RepeatColumns="10" RepeatDirection="Horizontal">
+                <asp:DataList ID="DataList1" runat="server" CellPadding="100" RepeatColumns="5" RepeatDirection="Horizontal">
                     <ItemTemplate>
                         <asp:ImageButton ID="ImageButton1" runat="server" CommandArgument='<%# Eval("C_Id") %>' Height="178px" ImageUrl='<%# Eval("C_Photo") %>' OnCommand="ImageButton1_Command" Width="198px" />
                         <br />

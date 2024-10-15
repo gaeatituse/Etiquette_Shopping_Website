@@ -162,7 +162,7 @@
                 <asp:TextBox ID="TextBox6" runat="server" Height="39px" Width="181px"></asp:TextBox>
             </td>
             <td class="auto-style12">
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="TextBox6" ErrorMessage="Incorrect format" ValidationExpression="\d{5}-?(\d{4})?$"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="TextBox6" ErrorMessage="Incorrect format" ValidationExpression="^[1-9][0-9]{5}$"></asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>

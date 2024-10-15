@@ -14,7 +14,7 @@ namespace Project1
 
         public ConnectionClass()
         {
-            con = new SqlConnection(@"server=DESKTOP-G3AE\SQLEXPRESS;database=Project;Integrated security=True");
+            con = new SqlConnection(@"server=DESKTOP-8BF3B0H\SQLEXPRESS;database=Project1;Integrated security=True");
         }
         public int Fun_Non_Query(string sql)
         {
