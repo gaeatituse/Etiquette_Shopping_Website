@@ -11,7 +11,7 @@ namespace Project1
 {
 
 
-    public partial class ViewCart
+    public partial class OrderPage
     {
 
         /// <summary>

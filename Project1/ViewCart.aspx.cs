@@ -65,5 +65,11 @@ namespace Project1
             Bind_Grid();
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            
+            Response.Redirect("OrderPage.aspx");
+        }
     }
 }

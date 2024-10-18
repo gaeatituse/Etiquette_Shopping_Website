@@ -72,6 +72,7 @@
     <Content Include="AdminHome\cat.jpg" />
     <Content Include="AdminHome\prod.jpg" />
     <Content Include="AdminRegisteration.aspx" />
+    <Content Include="BillPage.aspx" />
     <Content Include="CategoryEdit.aspx" />
     <Content Include="CatPhoto\Shirt.jpg" />
     <Content Include="contact.html" />
@@ -156,6 +157,7 @@
     <Content Include="js\slider-setting.js" />
     <Content Include="Loginpage.aspx" />
     <Content Include="news.html" />
+    <Content Include="OrderPage.aspx" />
     <Content Include="ProdPhoto\Shirt1.jpg" />
     <Content Include="ProductEdit.aspx" />
     <Content Include="products.html" />
@@ -182,6 +184,13 @@
     <Compile Include="AdminRegisteration.aspx.designer.cs">
       <DependentUpon>AdminRegisteration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BillPage.aspx.cs">
+      <DependentUpon>BillPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BillPage.aspx.designer.cs">
+      <DependentUpon>BillPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CategoryEdit.aspx.cs">
       <DependentUpon>CategoryEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -196,6 +205,13 @@
     </Compile>
     <Compile Include="Loginpage.aspx.designer.cs">
       <DependentUpon>Loginpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderPage.aspx.cs">
+      <DependentUpon>OrderPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderPage.aspx.designer.cs">
+      <DependentUpon>OrderPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductEdit.aspx.cs">
       <DependentUpon>ProductEdit.aspx</DependentUpon>
