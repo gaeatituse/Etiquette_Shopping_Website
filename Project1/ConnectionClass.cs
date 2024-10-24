@@ -18,6 +18,10 @@ namespace Project1
         }
         public int Fun_Non_Query(string sql)
         {
+            if (con.State == ConnectionState.Open)//To check when to close the connection.
+            {
+                con.Close();
+            }
             cmd = new SqlCommand(sql, con);
             con.Open();
             int i = cmd.ExecuteNonQuery();

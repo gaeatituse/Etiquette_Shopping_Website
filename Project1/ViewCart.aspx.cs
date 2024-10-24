@@ -68,8 +68,28 @@ namespace Project1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            
+            string s = "select max(Cart_Id) from CartTab";
+            string cmd = obj.Fun_Scalar(s);
+            int n = Convert.ToInt32(cmd);
+            for(int i = 1; i <= n; i++)
+            {
+                string se = "select * from CartTab where Cart_Id=" + i + "";
+                SqlDataReader dr = obj.Fun_exeReader(se);
+                int pid=0,uid=0,quantity=0,totalprice=0;
+                while (dr.Read())
+                {
+                    pid = Convert.ToInt32(dr["P_Id"]);
+                    uid = Convert.ToInt32(dr["U_Id"]);
+                    quantity = Convert.ToInt32(dr["Quantity"]);
+                    totalprice =Convert.ToInt32(dr["TotalPrize"]);
+                }
+                string oins="insert into OrderTab values("+pid+","+uid+","+quantity+","+totalprice+",'"+DateTime.UtcNow.ToString("yyyy-MM-dd") +"','Ordered')";
+                int j = obj.Fun_Non_Query(oins);
+                string cdel = "delete from CartTab where Cart_Id=" + i + "";
+                int k = obj.Fun_Non_Query(cdel);    
+            }
             Response.Redirect("OrderPage.aspx");
+            
         }
     }
 }
