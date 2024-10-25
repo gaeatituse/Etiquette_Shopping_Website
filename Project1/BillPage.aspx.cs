@@ -51,8 +51,23 @@ namespace Project1
                 string upbal = ob.balance_update(x,y);
                 string up = "update PaymentTab set Balance_amount='" + upbal + "' where U_Id=" + Session["userid"] + "";
                 int i = obj.Fun_Non_Query(up);
-                Response.Redirect("Paymentpage.aspx");
+                
 
+                List<string> lst = new List<string>();
+                string pid = "select P_Id from OrderTab where Order_Status='Ordered' and U_Id=" + Session["userid"] + "";
+                SqlDataReader dr1 = obj.Fun_exeReader(pid);
+                while (dr1.Read())
+                {
+                    lst.Add(Convert.ToString(dr1["P_Id"]));
+                    
+                }
+                foreach(var j in lst)
+                {
+                    string upd = "update OrderTab set Order_Status='Paid' where P_Id=" + Convert.ToInt32(j) + " and U_Id=" + Session["userid"] + "";
+                    int k = obj.Fun_Non_Query(upd);
+                }
+
+                Response.Redirect("Paymentpage.aspx");
 
             }
             else

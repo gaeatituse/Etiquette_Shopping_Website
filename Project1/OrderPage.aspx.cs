@@ -19,7 +19,7 @@ namespace Project1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string s = "select sum(TotalPrize) from OrderTab";
+            string s = "select sum(TotalPrize) from OrderTab where Order_Status='Ordered' and U_Id="+Session["userid"]+"";
             string cmd = obj.Fun_Scalar(s);
             int n = Convert.ToInt32(cmd);
             string bins = "insert into BillTab values(" + Session["userid"] + ",'" + DateTime.UtcNow.ToString("yyyy/MM/dd") + "'," + n + ")";
