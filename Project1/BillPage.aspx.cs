@@ -26,5 +26,40 @@ namespace Project1
                 Label6.Text = dr["GrandTotal"].ToString();
             }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Panel1.Visible = true;
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Balance_amountService.ServiceClient ob = new Balance_amountService.ServiceClient();
+            int bal = Convert.ToInt32(ob.balance_check(TextBox1.Text));
+            string gt= "select GrandTotal from BillTab where U_Id=" + Session["userid"] + "";
+            SqlDataReader dr = obj.Fun_exeReader(gt);
+            string userid = Session["userid"].ToString();
+            int t = 0;
+            while (dr.Read())
+            {
+                t = Convert.ToInt32(dr["GrandTotal"]);
+            }
+            if (bal > t)
+            {
+                string x = bal.ToString();
+                string y = t.ToString();
+                string upbal = ob.balance_update(x,y);
+                string up = "update PaymentTab set Balance_amount='" + upbal + "' where U_Id=" + Session["userid"] + "";
+                int i = obj.Fun_Non_Query(up);
+                Response.Redirect("Paymentpage.aspx");
+
+
+            }
+            else
+            {
+                Label7.Visible = true;
+                Label7.Text = "Insufficient balance";
+            }
+        }
     }
 }

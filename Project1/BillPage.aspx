@@ -18,6 +18,12 @@
         .auto-style6 {
             height: 27px;
         }
+    .auto-style7 {
+        width: 68px;
+    }
+    .auto-style8 {
+        width: 194px;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -106,7 +112,7 @@
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
             <td>
-                <asp:Button ID="Button1" runat="server" Text="Proceed to pay" />
+                <asp:Button ID="Button1" runat="server" Text="Proceed to pay" OnClick="Button1_Click" />
             </td>
         </tr>
         <tr>
@@ -117,7 +123,38 @@
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:Panel ID="Panel1" runat="server" Visible="False">
+                    <table class="w-100">
+                        <tr>
+                            <td class="auto-style7">&nbsp;</td>
+                            <td class="auto-style8">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style7">&nbsp;</td>
+                            <td class="auto-style8">Acc Number:</td>
+                            <td>
+                                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style7">&nbsp;</td>
+                            <td class="auto-style8">&nbsp;</td>
+                            <td>
+                                <asp:Label ID="Label7" runat="server" Text="Label" Visible="False"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style7">&nbsp;</td>
+                            <td class="auto-style8">&nbsp;</td>
+                            <td>
+                                <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Proceed for payment" />
+                            </td>
+                        </tr>
+                    </table>
+                </asp:Panel>
+            </td>
         </tr>
         <tr>
             <td class="auto-style2">&nbsp;</td>

@@ -44,6 +44,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -75,6 +77,16 @@
     <Content Include="BillPage.aspx" />
     <Content Include="CategoryEdit.aspx" />
     <Content Include="CatPhoto\Shirt.jpg" />
+    <Content Include="Connected Services\Balance_amountService\Project1.Balance_amountService.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\Balance_amountService\Service.disco" />
+    <None Include="Connected Services\Balance_amountService\configuration91.svcinfo" />
+    <None Include="Connected Services\Balance_amountService\configuration.svcinfo" />
+    <None Include="Connected Services\Balance_amountService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="contact.html" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap-grid.css" />
@@ -158,6 +170,7 @@
     <Content Include="Loginpage.aspx" />
     <Content Include="news.html" />
     <Content Include="OrderPage.aspx" />
+    <Content Include="Paymentpage.aspx" />
     <Content Include="ProdPhoto\Shirt1.jpg" />
     <Content Include="ProductEdit.aspx" />
     <Content Include="products.html" />
@@ -198,6 +211,11 @@
     <Compile Include="CategoryEdit.aspx.designer.cs">
       <DependentUpon>CategoryEdit.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\Balance_amountService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="ConnectionClass.cs" />
     <Compile Include="Loginpage.aspx.cs">
       <DependentUpon>Loginpage.aspx</DependentUpon>
@@ -212,6 +230,13 @@
     </Compile>
     <Compile Include="OrderPage.aspx.designer.cs">
       <DependentUpon>OrderPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paymentpage.aspx.cs">
+      <DependentUpon>Paymentpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paymentpage.aspx.designer.cs">
+      <DependentUpon>Paymentpage.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductEdit.aspx.cs">
       <DependentUpon>ProductEdit.aspx</DependentUpon>
@@ -314,6 +339,16 @@
     <Content Include="js\bootstrap.bundle.min.js.map" />
     <Content Include="js\bootstrap.js.map" />
     <Content Include="js\bootstrap.min.js.map" />
+    <None Include="Connected Services\Balance_amountService\Service.wsdl" />
+    <None Include="Connected Services\Balance_amountService\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Balance_amountService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Balance_amountService\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
@@ -325,6 +360,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="icon\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\Balance_amountService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
