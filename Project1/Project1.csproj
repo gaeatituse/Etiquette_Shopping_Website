@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.html" />
+    <Content Include="AdminFeedback.aspx" />
     <Content Include="AdminHomepage.aspx" />
     <Content Include="AdminHome\cat.jpg" />
     <Content Include="AdminHome\prod.jpg" />
@@ -174,6 +175,7 @@
     <Content Include="ProdPhoto\Shirt1.jpg" />
     <Content Include="ProductEdit.aspx" />
     <Content Include="products.html" />
+    <Content Include="Reply.aspx" />
     <Content Include="UserHomepage.aspx" />
     <Content Include="UserProdPage.aspx" />
     <Content Include="UserRegistration.aspx" />
@@ -183,6 +185,13 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminFeedback.aspx.cs">
+      <DependentUpon>AdminFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminFeedback.aspx.designer.cs">
+      <DependentUpon>AdminFeedback.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminHomepage.aspx.cs">
       <DependentUpon>AdminHomepage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -246,6 +255,13 @@
       <DependentUpon>ProductEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reply.aspx.cs">
+      <DependentUpon>Reply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reply.aspx.designer.cs">
+      <DependentUpon>Reply.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

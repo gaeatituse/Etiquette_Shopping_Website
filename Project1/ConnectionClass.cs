@@ -31,6 +31,10 @@ namespace Project1
 
         public string Fun_Scalar(string sql)
         {
+            if (con.State == ConnectionState.Open)//To check when to close the connection.
+            {
+                con.Close();
+            }
             cmd = new SqlCommand(sql, con);
             con.Open();
             string s = cmd.ExecuteScalar().ToString();

@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Net;
+using System.Net.Mail;
 
 namespace Project1
 {
@@ -63,10 +65,21 @@ namespace Project1
                 }
                 foreach(var j in lst)
                 {
+                    string sel = "select P_Stock from ProductTab where P_Id=" + Convert.ToInt32(j) + "";
+                    int l = Convert.ToInt32(obj.Fun_Scalar(sel));
+
+                    string sel1 = "select Quantity from OrderTab where P_Id=" + Convert.ToInt32(j) + " and U_Id=" + Session["userid"] + " and Order_Status='Ordered'";
+                    int q = Convert.ToInt32(obj.Fun_Scalar(sel1));
+
+                    string upd1 = "update ProductTab set P_Stock=" + (l - q).ToString() + " where P_Id=" + Convert.ToInt32(j) + "";
+                    int m = obj.Fun_Non_Query(upd1);
+
                     string upd = "update OrderTab set Order_Status='Paid' where P_Id=" + Convert.ToInt32(j) + " and U_Id=" + Session["userid"] + "";
                     int k = obj.Fun_Non_Query(upd);
-                }
 
+                    
+                }
+                
                 Response.Redirect("Paymentpage.aspx");
 
             }
