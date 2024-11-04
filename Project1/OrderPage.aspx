@@ -27,9 +27,7 @@
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td>
-                <asp:GridView ID="GridView1" runat="server">
-                </asp:GridView>
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style2">&nbsp;</td>

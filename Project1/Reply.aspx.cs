@@ -62,7 +62,7 @@ namespace Project1
             string j = obj.Fun_Scalar(sel1);
             SendEmail2("Etiquette", "etiqutte2024@gmail.com", "cqik qryo hthp ihwd", i, j, TextBox3.Text, TextBox4.Text);
 
-            string up = "update FeedbackTab set F_status='Inactive' where U_Id=" + Session["uid"] + " and F_status='Active'";
+            string up = "update FeedbackTab set F_status='Inactive', R_message='"+TextBox4.Text+"' where U_Id=" + Session["uid"] + " and F_status='Active'";
             int k = obj.Fun_Non_Query(up);
             if (k == 1)
             {
